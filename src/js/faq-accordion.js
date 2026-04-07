@@ -8,7 +8,51 @@ function setFaqState(item, isOpen) {
 
   item.classList.toggle('is-active', isOpen);
   trigger.setAttribute('aria-expanded', String(isOpen));
-  panel.hidden = !isOpen;
+}
+
+function openPanel(item) {
+  const panel = item.querySelector('.answer-text');
+
+  if (!panel) return;
+
+  panel.hidden = false;
+  panel.style.height = '0px';
+
+  requestAnimationFrame(() => {
+    panel.style.height = `${panel.scrollHeight}px`;
+  });
+}
+
+function closePanel(item) {
+  const panel = item.querySelector('.answer-text');
+
+  if (!panel) return;
+
+  panel.style.height = `${panel.scrollHeight}px`;
+
+  requestAnimationFrame(() => {
+    panel.style.height = '0px';
+  });
+}
+
+function toggleFaq(item, faqItems) {
+  const isOpen = item.classList.contains('is-active');
+
+  faqItems.forEach(faqItem => {
+    if (faqItem === item) return;
+
+    setFaqState(faqItem, false);
+    closePanel(faqItem);
+  });
+
+  if (isOpen) {
+    setFaqState(item, false);
+    closePanel(item);
+    return;
+  }
+
+  setFaqState(item, true);
+  openPanel(item);
 }
 
 if (faqList) {
@@ -30,14 +74,22 @@ if (faqList) {
     panel.id = panelId;
     panel.setAttribute('role', 'region');
     panel.setAttribute('aria-labelledby', triggerId);
+    panel.hidden = true;
+    panel.style.height = '0px';
 
     setFaqState(item, false);
 
-    trigger.addEventListener('click', () => {
-      const isOpen = item.classList.contains('is-active');
+    panel.addEventListener('transitionend', event => {
+      if (event.propertyName !== 'height') return;
 
-      faqItems.forEach(faqItem => setFaqState(faqItem, false));
-      setFaqState(item, !isOpen);
+      if (item.classList.contains('is-active')) {
+        panel.style.height = 'auto';
+        return;
+      }
+
+      panel.hidden = true;
     });
+
+    trigger.addEventListener('click', () => toggleFaq(item, faqItems));
   });
 }

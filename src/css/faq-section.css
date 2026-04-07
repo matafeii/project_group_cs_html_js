@@ -32,6 +32,14 @@ button {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.6;
+  height: 0;
+  opacity: 0;
+  transition: height 400ms ease, opacity 300ms ease;
+  will-change: height, opacity;
+}
+
+.faq-item.is-active .answer-text {
+  opacity: 1;
 }
 
 .faq-item {
