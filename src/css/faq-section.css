@@ -1,0 +1,98 @@
+/* @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&family=Raleway:wght@400;500;600;700&display=swap');
+body,
+button {
+  font-family: 'Raleway', sans-serif;
+} */
+
+.question-container {
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+.question-header {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+  text-align: center;
+  padding-bottom: 32px;
+  border-bottom: 1px solid rgba(8, 12, 9, 0.15);
+}
+
+.question-text {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.6;
+  padding: 20px 0;
+  text-align: start;
+}
+
+.answer-text {
+  overflow: hidden;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.faq-item {
+  margin-bottom: auto;
+  border-bottom: 1px solid rgba(8, 12, 9, 0.15);
+  transition: background-color 300ms ease;
+}
+
+.answ-txt {
+  padding-bottom: 24px;
+}
+
+.faq-btn {
+  border-radius: 0;
+  width: 100%;
+  background-color: transparent;
+  border-color: transparent;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.answer-trigger {
+  align-self: center;
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  stroke: #000;
+  fill: #000;
+  display: block;
+  transition: transform 0.5s ease-in-out;
+}
+
+.faq-item.is-active .answer-trigger {
+  transform: rotate(180deg);
+}
+
+.faq-item:hover,
+.faq-item:has(.faq-btn:focus-visible) {
+  background-color: rgba(8, 12, 9, 0.03);
+}
+
+/* Styles for Tablet devices */
+@media only screen and (min-width: 768px) {
+  .question-text {
+    padding: 21.5px 0;
+  }
+  .question-container {
+    margin: 0 auto;
+  }
+}
+/* Styles for Desktop devices */
+@media only screen and (min-width: 1440px) {
+  .question-container {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    width: 865px;
+    margin: 0 auto;
+  }
+  .question-header {
+    font-size: 48px;
+  }
+}

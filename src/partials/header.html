@@ -1,0 +1,70 @@
+<header class="page-header">
+  <div class="container header-container">
+    <nav class="header-nav" aria-label="Головна навігація">
+      <a href="./index.html" class="logo-link" aria-label="Mebleriia home">
+        <img src="/img/logo.svg" alt="Mebleriia logo">
+      </a>
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a class="nav-link" href="#furniture-list-id">Наші меблі</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about-us-id">Про нас</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#faq-section-id">Часті питання</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#feedback">Відгуки</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-btn" href="#furniture-list-id">До покупок</a>
+        </li>
+      </ul>
+    </nav>
+
+    <button
+      type="button"
+      class="burger-btn"
+      data-menu-open
+      aria-label="Open navigation menu"
+      aria-controls="mobile-menu"
+      aria-expanded="false"
+    >
+      <svg class="burger-icon" width="24" height="24" aria-hidden="true">
+        <use href="/img/header/icons-header.svg#icon-burger"></use>
+      </svg>
+    </button>
+  </div>
+
+  <div class="mobile-menu" id="mobile-menu" data-menu aria-hidden="true">
+    <div class="mobile-menu-container">
+      <div class="mobile-menu-header">
+        <a href="index.html" class="logo-link" aria-label="Mebleriia home">
+          <img src="/img/logo.svg" alt="Mebleriia logo" width="163" height="69">
+        </a>
+
+        <button
+          type="button"
+          class="mobile-menu-close"
+          data-menu-close
+          aria-label="Close navigation menu"
+        >
+          <svg width="20" height="20" aria-hidden="true">
+            <use href="/img/header/icons-header.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+
+      <nav class="mobile-nav" aria-label="Мобільна навігація">
+        <ul class="mobile-nav-list">
+          <li><a class="mobile-nav-link" href="#furniture-list-id">Наші меблі</a></li>
+          <li><a class="mobile-nav-link" href="#about-us-id">Про нас</a></li>
+          <li><a class="mobile-nav-link" href="#faq-section-id">Часті питання</a></li>
+          <li><a class="mobile-nav-link" href="#feedback">Відгуки</a></li>
+          <li><a class="mobile-nav-btn mobile-nav-link" href="#furniture-list-id">До покупок</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>

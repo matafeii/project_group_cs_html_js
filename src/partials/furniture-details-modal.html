@@ -1,0 +1,47 @@
+<div class="furniture-details-backdrop is-hidden" data-furniture-details-modal>
+  <div class="furniture-details-modal" role="dialog" aria-modal="true" aria-labelledby="furnitureName">
+    <button
+      type="button"
+      class="furniture-details-close-btn"
+      aria-label="Закрити деталі товару"
+      data-furniture-details-close
+    >
+      &times;
+    </button>
+
+    <div class="furniture-details-content">
+      <div class="furniture-gallery">
+        <img
+          class="furniture-main-image"
+          src="data:image/gif;base64,R0lGODlhAQABAAAAACw="
+          alt="Основне фото товару"
+          id="mainImage"
+        >
+        <ul class="furniture-thumbnails" id="thumbnailsList"></ul>
+      </div>
+
+      <div class="furniture-details-info">
+        <h2 class="furniture-details-name" id="furnitureName">Назва товару</h2>
+        <p class="furniture-details-category" id="furnitureCategory"></p>
+        <p class="furniture-details-price" id="furniturePrice"></p>
+        <div class="furniture-details-rating" id="furnitureRating" aria-label="Рейтинг товару"></div>
+
+        <div class="furniture-colors-section">
+          <p class="furniture-colors-label">Колір</p>
+          <ul class="furniture-colors-list" id="colorsList"></ul>
+        </div>
+
+        <p class="furniture-details-description" id="furnitureDescription"></p>
+
+        <div class="furniture-size-section">
+          <p class="furniture-size-label">Розмір</p>
+          <p class="furniture-size-value" id="furnitureSize"></p>
+        </div>
+
+        <button type="button" class="furniture-order-btn red-button">
+          Перейти до замовлення
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
