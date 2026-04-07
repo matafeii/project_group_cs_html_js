@@ -1,5 +1,3 @@
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
-
 .feedbacks-container {
   max-width: 375px;
   margin: 0 auto;
@@ -182,33 +180,30 @@ padding: 12px;
 }
 
 .star-rating-container {
-  display: flex ;
-  justify-content: flex-start;
-  gap: 4px;
-  margin-bottom: 16px;
-}
-
-.star-rating-container .fa-star-half-alt {
-  opacity: 1 ;
-  color: #080c09;
-}
-
-.star-rating-container i {
+  --rating: 0;
   position: relative;
   display: inline-block;
+  margin-bottom: 16px;
   font-size: 18px;
+  line-height: 1;
+  letter-spacing: 4px;
+}
+
+.star-rating-container::before,
+.star-rating-container::after {
+  content: "★★★★★";
+}
+
+.star-rating-container::before {
+  color: rgba(8, 12, 9, 0.3);
+}
+
+.star-rating-container::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(var(--rating) / 5 * 100%);
+  overflow: hidden;
   color: #080c09;
-  font-style: normal;
-}
-
-.star-rating-container .fa-star.far, 
-.star-rating-container .star-off-png {
-  opacity: 0.5;
-}
-
-.star-rating-container .fa-star.fas,
-.star-rating-container .fa-star-half-alt,
-.star-rating-container .star-on-png,
-.star-rating-container .star-half-png {
-  opacity: 1;
+  white-space: nowrap;
 }

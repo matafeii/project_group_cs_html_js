@@ -5,7 +5,6 @@ import "swiper/css";
 import axios from 'axios';
 import iziToast from "izitoast";
 import "izitoast/dist/css/iziToast.min.css";
-import Raty from 'raty-js';
 
 const API_URL = 'https://furniture-store.b.goit.study/api/feedbacks';
 
@@ -43,7 +42,11 @@ function createMarkup(feedbacks) {
     return `
       <li class="swiper-slide feedback-item">
         <div class="feedback-card">
-          <div class="star-rating-container" data-rating="${displayRate}"></div>
+          <div
+            class="star-rating-container"
+            style="--rating: ${displayRate};"
+            aria-label="Rating: ${displayRate} out of 5"
+          ></div>
           
           <p class="feedback-comment">"${descr}"</p>
           <h3 class="feedback-user-name">${name}</h3>
@@ -53,27 +56,6 @@ function createMarkup(feedbacks) {
   }).join('');
 }
 
-
-export function initRatings() {
-  const ratings = document.querySelectorAll('.star-rating-container');
-  
-  ratings.forEach(el => {
-    const score = parseFloat(el.getAttribute('data-rating'));
-    const raty = new Raty(el, {
-      score: score, 
-      readOnly: true,
-      half: true,
-      halfShow: true, 
-      starType: 'i',
-      starOn: 'fas fa-star',
-      starOff: 'far fa-star',
-      starHalf: 'fas fa-star-half-alt',
-      space: false
-    });
-    raty.init();
-  });
-}
-
 async function initFeedbackSection() {
   const container = document.querySelector('.feedback-list');
   if (!container) return; 
@@ -81,7 +63,6 @@ async function initFeedbackSection() {
   const data = await fetchFeedbacks();
   if (data.length === 0) return;
   container.innerHTML = createMarkup(data);
-  initRatings(); 
 
   new Swiper('.feedback-swiper', {
     modules: [Navigation, Pagination],

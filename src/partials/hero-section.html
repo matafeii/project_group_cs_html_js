@@ -1,9 +1,36 @@
-    <section class="hero">
-        <div class="container">
-            <div class="hero-div"> 
-                <h1 class="hero-title">Створіть свій ідеальний дім</h1>
-                <p class="hero-txt">Відкрийте для себе колекцію стильних та комфортних меблів, які перетворять ваш простір. Наша продукція поєднує в собі елегантність та функціональність.</p>
-                <a href="#feedback" class="hero-btn">Що про нас думають</a>
-            </div>
-        </div>
-    </section>
+<section class="hero">
+  <picture class="hero-media">
+    <source
+      media="(min-width: 1440px)"
+      srcset="/img/hero/hero-desktop.jpg 1x, /img/hero/hero-desktop2x.jpg 2x"
+    />
+    <source
+      media="(min-width: 768px)"
+      srcset="/img/hero/hero-tablet.jpg 1x, /img/hero/hero-tablet2x.jpg 2x"
+    />
+    <img
+      class="hero-image"
+      src="/img/hero/hero-mobile.jpg"
+      srcset="/img/hero/hero-mobile.jpg 1x, /img/hero/hero-mobile2x.jpg 2x"
+      sizes="100vw"
+      width="375"
+      height="812"
+      alt=""
+      fetchpriority="high"
+      loading="eager"
+      decoding="async"
+    />
+  </picture>
+  <div class="hero-overlay"></div>
+  <div class="container">
+    <div class="hero-div">
+      <h1 class="hero-title">Створіть свій ідеальний дім</h1>
+      <p class="hero-txt">
+        Відкрийте для себе колекцію стильних та комфортних меблів, які
+        перетворять ваш простір. Наша продукція поєднує в собі елегантність та
+        функціональність.
+      </p>
+      <a href="#feedback" class="hero-btn">Що про нас думають</a>
+    </div>
+  </div>
+</section>

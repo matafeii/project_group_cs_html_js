@@ -120,7 +120,15 @@ function furnitureTemplate(item) {
     .join('');
   return `
     <li class="item-card" data-id="${item._id}">
-      <img src="${item.images[0]}" alt="${item.name}">
+      <img
+        src="${item.images[0]}"
+        alt="${item.name}"
+        width="343"
+        height="240"
+        loading="lazy"
+        decoding="async"
+        sizes="(min-width: 1440px) 310px, (min-width: 768px) calc((100vw - 80px) / 2), calc(100vw - 32px)"
+      >
       <div class="furnitures-description">
         <p class="furnitures-name">${item.name}</p>
         <ul class="furnitures-colors">${colors}</ul>
