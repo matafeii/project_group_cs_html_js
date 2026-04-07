@@ -1,21 +1,18 @@
-import Accordion from 'accordion-js';
-import 'accordion-js/dist/accordion.min.css';
-
 const faqList = document.querySelector('.faq-list');
 
-function syncFaqState(item) {
+function setFaqState(item, isOpen) {
   const trigger = item.querySelector('.faq-btn');
   const panel = item.querySelector('.answer-text');
-  const isActive = item.classList.contains('is-active');
 
   if (!trigger || !panel) return;
 
-  trigger.setAttribute('aria-expanded', String(isActive));
-  panel.hidden = !isActive;
+  item.classList.toggle('is-active', isOpen);
+  trigger.setAttribute('aria-expanded', String(isOpen));
+  panel.hidden = !isOpen;
 }
 
 if (faqList) {
-  const faqItems = faqList.querySelectorAll('.faq-item');
+  const faqItems = [...faqList.querySelectorAll('.faq-item')];
 
   faqItems.forEach((item, index) => {
     const trigger = item.querySelector('.faq-btn');
@@ -28,20 +25,19 @@ if (faqList) {
 
     trigger.id = triggerId;
     trigger.setAttribute('aria-controls', panelId);
+    trigger.setAttribute('aria-expanded', 'false');
+
     panel.id = panelId;
     panel.setAttribute('role', 'region');
     panel.setAttribute('aria-labelledby', triggerId);
 
-    syncFaqState(item);
-  });
+    setFaqState(item, false);
 
-  new Accordion('.faq-list', {
-    showMultiple: false,
-    duration: 600,
-    triggerClass: 'faq-btn',
-    elementClass: 'faq-item',
-    panelClass: 'answer-text',
-    onOpen: currentElement => syncFaqState(currentElement),
-    onClose: currentElement => syncFaqState(currentElement),
+    trigger.addEventListener('click', () => {
+      const isOpen = item.classList.contains('is-active');
+
+      faqItems.forEach(faqItem => setFaqState(faqItem, false));
+      setFaqState(item, !isOpen);
+    });
   });
 }
