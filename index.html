@@ -5,10 +5,27 @@
     <link rel="icon" type="image/svg+xml" href="/project_group_cs_html_js/img/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Меблерія</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://furniture-store-v2.b.goit.study" crossorigin />
+    <link rel="preconnect" href="https://furniture-store.b.goit.study" crossorigin />
+    <link rel="preconnect" href="https://ftp.goit.study" crossorigin />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap"
+      />
+    </noscript>
     <script type="module" crossorigin src="/project_group_cs_html_js/index.js"></script>
-    <link rel="modulepreload" crossorigin href="/project_group_cs_html_js/assets/vendor-DScGXjsP.js">
+    <link rel="modulepreload" crossorigin href="/project_group_cs_html_js/assets/vendor-J2LUxpWo.js">
     <link rel="stylesheet" crossorigin href="/project_group_cs_html_js/assets/vendor-Bv0FPWL4.css">
-    <link rel="stylesheet" crossorigin href="/project_group_cs_html_js/assets/index-2-oDK6La.css">
+    <link rel="stylesheet" crossorigin href="/project_group_cs_html_js/assets/index-DR8KSKtD.css">
   </head>
   <body>
     <header class="page-header">
@@ -72,15 +89,43 @@
     
 
     <main>
-          <section class="hero">
-        <div class="container">
-            <div class="hero-div"> 
-                <h1 class="hero-title">Створіть свій ідеальний дім</h1>
-                <p class="hero-txt">Відкрийте для себе колекцію стильних та комфортних меблів, які перетворять ваш простір. Наша продукція поєднує в собі елегантність та функціональність.</p>
-                <a href="#feedback" class="hero-btn">Що про нас думають</a>
-            </div>
-        </div>
-    </section>
+      <section class="hero">
+  <picture class="hero-media">
+    <source
+      media="(min-width: 1440px)"
+      srcset="/project_group_cs_html_js/img/hero/hero-desktop.jpg 1x, /project_group_cs_html_js/img/hero/hero-desktop2x.jpg 2x"
+    />
+    <source
+      media="(min-width: 768px)"
+      srcset="/project_group_cs_html_js/img/hero/hero-tablet.jpg 1x, /project_group_cs_html_js/img/hero/hero-tablet2x.jpg 2x"
+    />
+    <img
+      class="hero-image"
+      src="/project_group_cs_html_js/img/hero/hero-mobile.jpg"
+      srcset="/project_group_cs_html_js/img/hero/hero-mobile.jpg 1x, /project_group_cs_html_js/img/hero/hero-mobile2x.jpg 2x"
+      sizes="100vw"
+      width="375"
+      height="812"
+      alt=""
+      fetchpriority="high"
+      loading="eager"
+      decoding="async"
+    />
+  </picture>
+  <div class="hero-overlay"></div>
+  <div class="container">
+    <div class="hero-div">
+      <h1 class="hero-title">Створіть свій ідеальний дім</h1>
+      <p class="hero-txt">
+        Відкрийте для себе колекцію стильних та комфортних меблів, які
+        перетворять ваш простір. Наша продукція поєднує в собі елегантність та
+        функціональність.
+      </p>
+      <a href="#feedback" class="hero-btn">Що про нас думають</a>
+    </div>
+  </div>
+</section>
+
       <section class="container furniture-list" id="furniture-list-id">
   <div class="header-furniture-list">
     <h2>Наші Меблі</h2>
@@ -94,15 +139,16 @@
 
       <section class="section about-section" id="about-us-id">
   <div class="container about-container">
-    <div class="component"> 
+    <div class="component">
       <!-- Ліва частина — текст -->
       <div class="content-left">
         <div class="content">
           <h1 class="heading">Про Меблерію</h1>
           <p class="text">
-            У Меблерії ми прагнемо створювати затишок та функціональність у кожному домі. 
-            Наша місія - пропонувати високоякісні меблі, що поєднують у собі сучасний дизайн, 
-            довговічність та доступність. Ми віримо, що ідеальний інтер'єр починається з правильних меблів.
+            У Меблерії ми прагнемо створювати затишок та функціональність у
+            кожному домі. Наша місія - пропонувати високоякісні меблі, що
+            поєднують у собі сучасний дизайн, довговічність та доступність. Ми
+            віримо, що ідеальний інтер'єр починається з правильних меблів.
           </p>
         </div>
       </div>
@@ -110,18 +156,22 @@
       <!-- Права частина — зображення -->
       <div class="image">
         <picture>
-          <source 
-      media="(min-width: 1440px)" 
-      srcset="/project_group_cs_html_js/img/about/about-us-desktop.jpg 1x, /project_group_cs_html_js/img/about/about-us-desktop@2x.jpg 2x">
-              
-              <source 
-      media="(min-width: 768px)" 
-      srcset="/project_group_cs_html_js/img/about/about-us-tablet.jpg 1x, /project_group_cs_html_js/img/about/about-us-tablet@2x.jpg 2x">
-
-          <img 
-      src="/project_group_cs_html_js/img/about/about-us-mobile.jpg" 
-      alt="Про Меблерію"
-      srcset="/project_group_cs_html_js/img/about/about-us-mobile.jpg 1x, /project_group_cs_html_js/img/about/about-us-mobile@2x.jpg 2x">
+          <source
+            media="(min-width: 1440px)"
+            srcset="/project_group_cs_html_js/img/about/about-us-desktop.jpg 1x, /project_group_cs_html_js/img/about/about-us-desktop@2x.jpg 2x"
+          />
+          <source
+            media="(min-width: 768px)"
+            srcset="/project_group_cs_html_js/img/about/about-us-tablet.jpg 1x, /project_group_cs_html_js/img/about/about-us-tablet@2x.jpg 2x"
+          />
+          <img
+            src="/project_group_cs_html_js/img/about/about-us-mobile.jpg"
+            alt="Про Меблерію"
+            srcset="/project_group_cs_html_js/img/about/about-us-mobile.jpg 1x, /project_group_cs_html_js/img/about/about-us-mobile@2x.jpg 2x"
+            sizes="(min-width: 1440px) 632px, (min-width: 768px) 704px, calc(100vw - 32px)"
+            loading="lazy"
+            decoding="async"
+          />
         </picture>
       </div>
     </div>
