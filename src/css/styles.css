@@ -13,8 +13,11 @@
 @import url('./footer.css');
 
 /* Modal style */
+@import url('./mobile-menu.css');
 @import url('./furniture-details-modal.css');
 @import url('./order-modal.css');
 
 /* Loader style */
 @import url('./loader.css');
+
+@import url('./back-to-top.css');

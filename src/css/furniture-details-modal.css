@@ -4,10 +4,10 @@
   left: 0;
   width: 100%;
   height: 100%;
-  padding: 20px;
+  padding: 103px 20px;
   background-color: rgba(46, 47, 66, 0.4);
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   overflow-y: auto;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
@@ -20,12 +20,14 @@
   visibility: hidden;
   pointer-events: none;
 }
+
+
+
 .furniture-details-modal {
   background-color: #ffffff;
   width: 100%;
   max-width: 335px;
-  padding: 40px 20px;
-  border-radius: 8px;
+padding: 64px 20px 44px;  border-radius: 8px;
   position: relative;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   display: flex;
@@ -34,27 +36,31 @@
 
 @media screen and (min-width: 768px) {
   .furniture-details-modal {
+    width: 704px;
     max-width: 704px;
-    padding: 40px 32px;
+    height: 1091px;
+    padding: 64px 32px;
   }
 }
 
 @media screen and (min-width: 1440px) {
   .furniture-details-modal {
-    max-width: 866px;
-    padding: 40px;
+    width: 1090px;
+    max-width: 1090px;
+    height: 649px;
+    padding: 64px;
   }
 }
 
 .furniture-details-close-btn {
   position: absolute;
-  top: 14px;
-  right: 14px;
-  width: 24px;
-  height: 24px;
+  top: 16px;
+  right: 16px;
+  width: 32px;
+  height: 32px;
   background: none;
   border: none;
-  font-size: 24px;
+  font-size: 32px;
   line-height: 0;
   cursor: pointer;
   display: flex;
@@ -69,22 +75,22 @@
   color: #6b0609;
 }
 
-.furniture-details-close-btn:focus-visible {
-  outline: 2px solid #6b0609;
-  outline-offset: 2px;
-}
-
 .furniture-details-content {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 24px;
 }
 
 @media screen and (min-width: 768px) {
   .furniture-details-content {
-    flex-direction: row;
-    gap: 40px;
+    flex-direction: column;
     align-items: flex-start;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .furniture-details-content {
+    flex-direction: row;
+
   }
 }
 
@@ -97,14 +103,14 @@
 
 @media screen and (min-width: 768px) {
   .furniture-gallery {
-    width: 320px;
+    width: 640px;
     min-height: 320px;
   }
 }
 
 @media screen and (min-width: 1440px) {
   .furniture-gallery {
-    width: 360px;
+    width: 580px;
     min-height: 360px;
   }
 }
@@ -118,13 +124,13 @@
 
 @media screen and (min-width: 768px) {
   .furniture-main-image {
-    height: 280px;
+    height: 297px;
   }
 }
 
 @media screen and (min-width: 1440px) {
   .furniture-main-image {
-    height: 320px;
+    height: 308px;
   }
 }
 
@@ -135,7 +141,7 @@
 }
 
 .furniture-thumbnail {
-  width: calc((100% - 16px) / 3);
+  width: calc((100% - 8px) / 2);
   height: auto;
   border-radius: 8px;
   cursor: pointer;
@@ -146,27 +152,12 @@
 
 .furniture-thumbnail img {
   width: 100%;
-  height: 80px;
+  height: 197px;
   object-fit: cover;
   display: block;
 }
 
-.furniture-thumbnail-btn {
-  width: 100%;
-  padding: 0;
-  border: none;
-  background: transparent;
-}
-
-.furniture-thumbnail-btn:focus-visible {
-  outline: 2px solid #6b0609;
-  outline-offset: -2px;
-}
-
 @media screen and (min-width: 768px) {
-  .furniture-thumbnail img {
-    height: 80px;
-  }
 }
 
 .furniture-thumbnail.active {
@@ -181,14 +172,13 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 16px;
 }
 
 .furniture-details-name {
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
-  font-size: 28px;
-  line-height: 120%;
+  font-size: 32px;
+  line-height: 1.20;
   letter-spacing: 0.01em;
   color: #080c09;
   margin: 0;
@@ -201,36 +191,31 @@
 }
 
 .furniture-details-category {
-  font-size: 14px;
-  line-height: 160%;
+  font-size: 16px;
+  line-height: 1.60;
   color: rgba(8, 12, 9, 0.7);
   margin: 0;
 }
 
 .furniture-details-price {
   font-weight: 600;
-  font-size: 18px;
-  line-height: 160%;
+  font-size: 24px;
+  line-height: 1.60;
   color: #080c09;
   margin: 0;
+  margin-bottom: 24px;
 }
 
 .furniture-details-rating {
   display: flex;
   align-items: center;
   gap: 4px;
+  margin-bottom: 24px;
 }
 
 .furniture-star {
   font-size: 16px;
-  color: #ffc107;
-}
-
-.furniture-star.half {
-  color: transparent;
-  background: linear-gradient(90deg, #ffc107 50%, #ddd 50%);
-  -webkit-background-clip: text;
-  background-clip: text;
+  color: rgba(8, 12, 9, 1);
 }
 
 .furniture-star.empty {
@@ -240,13 +225,14 @@
 .furniture-colors-section {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 8px;
+  margin-bottom: 24px;
 }
 
 .furniture-colors-label {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
-  line-height: 160%;
+  line-height: 1.60;
   color: #080c09;
   margin: 0;
 }
@@ -266,9 +252,16 @@
   flex-shrink: 0;
 }
 
+.furniture-color-label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
 .furniture-color-circle {
-  width: 44px;
-  height: 44px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   border: 2px solid rgba(8, 12, 9, 0.15);
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -278,15 +271,7 @@
 }
 
 .furniture-color-item input[type='radio'] {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip-path: inset(50%);
-  white-space: nowrap;
-  border: 0;
+  display: none;
 }
 
 .furniture-color-item input[type='radio']:checked + .furniture-color-circle {
@@ -299,38 +284,40 @@
 }
 
 .furniture-details-description {
-  font-size: 14px;
-  line-height: 160%;
+  font-size: 16px;
+  line-height: 1.60;
   color: #080c09;
   margin: 0;
+  margin-bottom: 32px;
+  max-width: 421px;
 }
 
 .furniture-size-section {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 8px;
 }
 
 .furniture-size-label {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
-  line-height: 160%;
+  line-height: 1.60;
   color: #080c09;
   margin: 0;
 }
 
 .furniture-size-value {
-  font-size: 14px;
-  line-height: 160%;
+  font-size: 16px;
+  line-height: 1.60;
   color: rgba(8, 12, 9, 0.7);
   margin: 0;
 }
 .furniture-order-btn {
-  margin-top: 16px;
-  padding: 14px 24px;
+  margin-top: 24px;
+  padding: 10px 54px;
   font-size: 16px;
   font-weight: 500;
-  line-height: 160%;
+  line-height: 1.6;
   border: none;
   border-radius: 100px;
   background-color: #6b0609;

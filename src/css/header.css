@@ -1,3 +1,39 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  color: #1f1f1f;
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 375px;
+  padding: 0 16px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding: 0 32px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1440px;
+    padding: 0 64px;
+  }
+}
+
 .page-header {
   background: #fff;
   border-bottom: 1px solid #eee;
@@ -36,7 +72,7 @@
 
 .nav-link:hover,
 .nav-link:focus {
-  color: #6b0609;
+  color: #6B0609;
 }
 
 .burger-btn {
@@ -109,19 +145,15 @@
 
 .mobile-nav-btn {
   display: inline-block;
-  padding: 8px 123px;
-  background: #6b0609;
+  padding: 8px 90px;
+  width: 100%;
+  background: #6B0609;
   color: #fff;
   border-radius: 100px;
   text-decoration: none;
   margin-top: 8px;
   transition: opacity 0.3s ease-in-out;
-  box-shadow:
-    0 1px 2px 0 rgba(8, 12, 9, 0.05),
-    inset 0 -2px 1px 0 rgba(0, 0, 0, 0.2),
-    inset 0 0 0 1px rgba(8, 12, 9, 0.15),
-    inset 0 2px 1px 0 rgba(255, 255, 255, 0.25),
-    inset 0 32px 24px 0 rgba(255, 255, 255, 0.05);
+  box-shadow: 0 1px 2px 0 rgba(8, 12, 9, 0.05), inset 0 -2px 1px 0 rgba(0, 0, 0, 0.2), inset 0 0 0 1px rgba(8, 12, 9, 0.15), inset 0 2px 1px 0 rgba(255, 255, 255, 0.25), inset 0 32px 24px 0 rgba(255, 255, 255, 0.05);
 }
 
 .mobile-nav-btn:hover,
@@ -161,7 +193,7 @@
   }
 
   .logo-link:hover {
-    fill: #6b0609;
+    fill:#6B0609;
   }
 
   .mobile-menu-header {
@@ -187,7 +219,7 @@
     max-width: 335px;
     height: 42px;
     padding: 8px 48px;
-    background: #6b0609;
+    background: #6B0609;
     color: #fff;
     border-radius: 100px;
     text-align: center;
@@ -222,18 +254,13 @@
 
   .nav-btn {
     padding: 12px 24px;
-    background: #6b0609;
+    background: #6B0609;
     color: #fff;
     border-radius: 100px;
     text-decoration: none;
     font-size: 16px;
     transition: opacity 0.3s ease;
-    box-shadow:
-      0 1px 2px 0 rgba(8, 12, 9, 0.05),
-      inset 0 -2px 1px 0 rgba(0, 0, 0, 0.2),
-      inset 0 0 0 1px rgba(8, 12, 9, 0.15),
-      inset 0 2px 1px 0 rgba(255, 255, 255, 0.25),
-      inset 0 32px 24px 0 rgba(255, 255, 255, 0.05);
+    box-shadow: 0 1px 2px 0 rgba(8, 12, 9, 0.05), inset 0 -2px 1px 0 rgba(0, 0, 0, 0.2), inset 0 0 0 1px rgba(8, 12, 9, 0.15), inset 0 2px 1px 0 rgba(255, 255, 255, 0.25), inset 0 32px 24px 0 rgba(255, 255, 255, 0.05);
   }
 
   .nav-btn:hover,

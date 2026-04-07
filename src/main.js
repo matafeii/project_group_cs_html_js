@@ -9,3 +9,5 @@ import './js/feedback.js';
 
 import './js/furniture-details-modal.js';
 import './js/order-modal.js';
+
+import './js/back-to-top.js';
